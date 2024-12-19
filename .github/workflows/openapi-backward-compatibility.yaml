@@ -1,4 +1,4 @@
-name: OpenAPI Compatibility Check
+name: OpenAPI Backward Compatibility Check
 
 on:
   push:
@@ -9,20 +9,14 @@ on:
       - 'schemas/openapi.json'
 
 jobs:
-  check-openapi-compatibility:
+  check-openapi-backward-compatibility:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.base_ref }}
           sparse-checkout: schemas/openapi.json
           sparse-checkout-cone-mode: false
-      - run: cp schemas/openapi.json openapi-base.json
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-          sparse-checkout: schemas/openapi.json
-          sparse-checkout-cone-mode: false
+      - run: git show ${{ github.base_ref }}:schemas/openapi.json > openapi-base.json
       - name: Run OpenAPI-diff
         uses: docker://openapitools/openapi-diff
         with:
