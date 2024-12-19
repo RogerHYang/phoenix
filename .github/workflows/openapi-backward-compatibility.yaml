@@ -14,10 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 2
           sparse-checkout: schemas/openapi.json
           sparse-checkout-cone-mode: false
       - run: git show ${{ github.base_ref }}:schemas/openapi.json > openapi-base.json
-      - name: Run OpenAPI-diff
-        uses: docker://openapitools/openapi-diff
+      - uses: docker://openapitools/openapi-diff
         with:
           args: --fail-on-incompatible openapi-base.json schemas/openapi.json
