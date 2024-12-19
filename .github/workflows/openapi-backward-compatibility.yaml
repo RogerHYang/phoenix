@@ -12,17 +12,15 @@ jobs:
   check-openapi-compatibility:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch all history for all branches
-
-      - name: Get base branch OpenAPI spec
-        run: |
-          git checkout ${{ github.base_ref }}
-          cp schemas/openapi.json openapi-base.json
-          git checkout ${{ github.head_ref }}
-
+          ref: ${{ github.base_ref }}
+          sparse-checkout: schemas/openapi.json
+      - run: cp schemas/openapi.json openapi-base.json
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          sparse-checkout: schemas/openapi.json
       - name: Run OpenAPI-diff
         uses: docker://openapitools/openapi-diff
         with:
