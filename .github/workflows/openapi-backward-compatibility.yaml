@@ -16,11 +16,13 @@ jobs:
         with:
           ref: ${{ github.base_ref }}
           sparse-checkout: schemas/openapi.json
+          sparse-checkout-cone-mode: false
       - run: cp schemas/openapi.json openapi-base.json
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
           sparse-checkout: schemas/openapi.json
+          sparse-checkout-cone-mode: false
       - name: Run OpenAPI-diff
         uses: docker://openapitools/openapi-diff
         with:
