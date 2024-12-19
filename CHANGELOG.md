@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.2.1](https://github.com/RogerHYang/phoenix/compare/arize-phoenix-v7.2.0...arize-phoenix-v7.2.1) (2024-12-19)
+
+
+### Bug Fixes
+
+* test ([4adf326](https://github.com/RogerHYang/phoenix/commit/4adf3262d01dadef16be90f2b7d2a5fcac4d0575))
+
 ## [7.2.0](https://github.com/Arize-ai/phoenix/compare/arize-phoenix-v7.1.1...arize-phoenix-v7.2.0) (2024-12-18)
 
 

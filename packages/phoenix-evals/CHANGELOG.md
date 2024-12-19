@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.17.6](https://github.com/RogerHYang/phoenix/compare/arize-phoenix-evals-v0.17.5...arize-phoenix-evals-v0.17.6) (2024-12-19)
+
+
+### Bug Fixes
+
+* test ([4adf326](https://github.com/RogerHYang/phoenix/commit/4adf3262d01dadef16be90f2b7d2a5fcac4d0575))
+
 ## [0.17.5](https://github.com/Arize-ai/phoenix/compare/arize-phoenix-evals-v0.17.4...arize-phoenix-evals-v0.17.5) (2024-11-19)
 
 
