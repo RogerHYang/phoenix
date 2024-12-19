@@ -1306,10 +1306,6 @@
             "type": "integer",
             "title": "Id"
           },
-          "name": {
-            "type": "string",
-            "title": "Name"
-          },
           "description": {
             "anyOf": [
               {
@@ -1339,7 +1335,6 @@
         "type": "object",
         "required": [
           "id",
-          "name",
           "description",
           "metadata",
           "created_at",
@@ -1423,10 +1418,6 @@
             "type": "integer",
             "title": "Id"
           },
-          "name": {
-            "type": "string",
-            "title": "Name"
-          },
           "description": {
             "anyOf": [
               {
@@ -1460,7 +1451,6 @@
         "type": "object",
         "required": [
           "id",
-          "name",
           "description",
           "metadata",
           "created_at",
