@@ -61,6 +61,7 @@ class BulkInserter:
         :param enable_prometheus: Whether Prometheus is enabled.
         """
         self._db = db
+        
         self._running = False
         self._sleep = sleep
         self._max_ops_per_transaction = max_ops_per_transaction

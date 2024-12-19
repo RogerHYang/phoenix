@@ -1,5 +1,4 @@
 {
-    "separate-pull-requests": true,
     "sequential-calls": true,
     "packages": {
         ".": {

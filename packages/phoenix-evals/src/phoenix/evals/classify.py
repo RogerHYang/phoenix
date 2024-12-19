@@ -45,6 +45,7 @@ logger = logging.getLogger(__name__)
 
 
 ColumnName: TypeAlias = str
+
 Label: TypeAlias = str
 Score: TypeAlias = Optional[float]
 Explanation: TypeAlias = Optional[str]
