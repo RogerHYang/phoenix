@@ -1,0 +1,29 @@
+name: OpenAPI Compatibility Check
+
+on:
+  push:
+    paths:
+      - 'schemas/openapi.json'
+  pull_request:
+    paths:
+      - 'schemas/openapi.json'
+
+jobs:
+  check-openapi-compatibility:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history for all branches
+
+      - name: Get base branch OpenAPI spec
+        run: |
+          git checkout ${{ github.base_ref }}
+          cp schemas/openapi.json openapi-base.json
+          git checkout ${{ github.head_ref }}
+
+      - name: Run OpenAPI-diff
+        uses: docker://openapitools/openapi-diff
+        with:
+          args: --fail-on-incompatible openapi-base.json schemas/openapi.json

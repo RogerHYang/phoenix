@@ -1303,7 +1303,7 @@
       "Dataset": {
         "properties": {
           "id": {
-            "type": "string",
+            "type": "integer",
             "title": "Id"
           },
           "name": {
@@ -1420,7 +1420,7 @@
       "DatasetWithExampleCount": {
         "properties": {
           "id": {
-            "type": "string",
+            "type": "integer",
             "title": "Id"
           },
           "name": {
