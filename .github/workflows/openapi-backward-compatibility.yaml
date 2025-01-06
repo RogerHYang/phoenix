@@ -17,8 +17,8 @@ jobs:
           fetch-depth: 0
       - run: |
           git checkout ${{ github.base_ref }}
-          cp schemas/openapi.json .openapi.base.json
+          cp schemas/openapi.json .${{ github.sha }}.openapi.json
           git checkout ${{ github.head_ref }}
       - uses: docker://openapitools/openapi-diff
         with:
-          args: --fail-on-incompatible .openapi.base.json schemas/openapi.json
+          args: --fail-on-incompatible .${{ github.sha }}.openapi.json schemas/openapi.json
