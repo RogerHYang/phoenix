@@ -9,17 +9,16 @@ on:
       - 'schemas/openapi.json'
 
 jobs:
-  check-openapi-compatibility:
+  openapi-schema-backward-compatibility-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
       - run: |
           git checkout ${{ github.base_ref }}
-          cp schemas/openapi.json .openapi-base.json
+          cp schemas/openapi.json .openapi.base.json
           git checkout ${{ github.head_ref }}
       - uses: docker://openapitools/openapi-diff
         with:
-          args: --fail-on-incompatible .openapi-base.json schemas/openapi.json
+          args: --fail-on-incompatible .openapi.base.json schemas/openapi.json
