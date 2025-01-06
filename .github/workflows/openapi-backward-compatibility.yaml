@@ -14,7 +14,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
+        with:
+          fetch-depth: 1
       - run: |
           git checkout ${{ github.base_ref }}
           cp schemas/openapi.json .openapi-base.json
