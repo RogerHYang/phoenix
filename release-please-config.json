@@ -31,6 +31,13 @@
             "prerelease-type": "alpha",
             "prerelease": true
         },
+        "packages/phoenix-abc": {
+            "package-name": "arize-phoenix-abc",
+            "release-type": "python",
+            "versioning": "prerelease",
+            "prerelease-type": "alpha",
+            "prerelease": true
+        },
         "packages/phoenix-evals": {
             "package-name": "arize-phoenix-evals",
             "release-type": "python"
