@@ -66,8 +66,8 @@ router = APIRouter(tags=["datasets"])
 
 
 class Dataset(V1RoutesBaseModel):
-    id: str
-    name: str
+    id: int
+    # name: str
     description: Optional[str]
     metadata: dict[str, Any]
     created_at: datetime
