@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.19.0](https://github.com/RogerHYang/phoenix/compare/arize-phoenix-evals-v0.18.1...arize-phoenix-evals-v0.19.0) (2025-01-07)
+
+
+### Features
+
+* Always prompt as system for OpenAI Models ([#4937](https://github.com/RogerHYang/phoenix/issues/4937)) ([5f28ef2](https://github.com/RogerHYang/phoenix/commit/5f28ef244db2c4dd59fad6c6d6f1b63ff235817b))
+* Enable `phoenix.evals` to handle multimodal message templates ([#5522](https://github.com/RogerHYang/phoenix/issues/5522)) ([41a4fc2](https://github.com/RogerHYang/phoenix/commit/41a4fc2ef98b8a06747e5cdd07f07d9bbe5662c3))
+
+
+### Bug Fixes
+
+* Allow ClassificationTemplate w/o explanation template ([#5877](https://github.com/RogerHYang/phoenix/issues/5877)) ([d2df7ad](https://github.com/RogerHYang/phoenix/commit/d2df7ad8792df3d0637c003ba367dc483f6ad40d))
+* Allow dot key values in templates ([#5436](https://github.com/RogerHYang/phoenix/issues/5436)) ([8181094](https://github.com/RogerHYang/phoenix/commit/8181094ebd66e01f01a00ebe97473a965f7274e8))
+* allow progress bar to be disabled ([#5064](https://github.com/RogerHYang/phoenix/issues/5064)) ([07d9856](https://github.com/RogerHYang/phoenix/commit/07d985672de77ed5f90a8195cbac24554c951ac4))
+* **evals:** increase default max tokens ([#5339](https://github.com/RogerHYang/phoenix/issues/5339)) ([b4af61e](https://github.com/RogerHYang/phoenix/commit/b4af61ee544c929fb01ac97724c1c657f0a46715))
+* **evals:** only allow keyword arguments for model instantiation ([#5287](https://github.com/RogerHYang/phoenix/issues/5287)) ([aa95902](https://github.com/RogerHYang/phoenix/commit/aa95902e82b9207d6108e2a19b8531a817273e06))
+* increase python upper bound to include python 3.13 for `arize-phoenix-evals` and `arize-phoenix-otel` ([#5077](https://github.com/RogerHYang/phoenix/issues/5077)) ([ef5c893](https://github.com/RogerHYang/phoenix/commit/ef5c893ef7bc81690662a7687ed190f5b6dca701))
+* spelling errors in prompt templates ([#5571](https://github.com/RogerHYang/phoenix/issues/5571)) ([9646c8e](https://github.com/RogerHYang/phoenix/commit/9646c8ebc7ba81043f4e1a678977a8c6a0fa50c1))
+
+
+### Documentation
+
+* update sessions (GITBOOK-940) ([88dc135](https://github.com/RogerHYang/phoenix/commit/88dc135f99b03697387df0140533a0808454a88e))
+
 ## [0.18.1](https://github.com/Arize-ai/phoenix/compare/arize-phoenix-evals-v0.18.0...arize-phoenix-evals-v0.18.1) (2025-01-07)
 
 
