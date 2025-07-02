@@ -21,7 +21,7 @@
       "name_pattern": "^(claude-3-5-haiku-20241022|anthropic\\.claude-3-5-haiku-20241022-v1:0|claude-3-5-haiku-V1@20241022)$",
       "token_prices": [
         {
-          "base_rate": 8e-7,
+          "base_rate": 8.0e-7,
           "is_prompt": true,
           "token_type": "input"
         },
